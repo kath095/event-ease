@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,36 +9,42 @@
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
 <body>
     <nav class="navbar">
-        <div class="nav-left">
+        <div class="nav-container">
+        <div class="nav-links">  
             <a href="index.php">Home</a>
             <a href="event.php">Event</a>
             <a href="payment.php">Payment</a>
             <a href="reminder.php">Reminder</a>
         </div>
-        <div class="nav-right">
-            <a href="login.php" class="login-btn">
-                <i class="ph ph-user"></i>Login/Register
-            </a>            
+        <div class="nav-login">
+            <div class="nav-profile">
+                <i class="ph ph-user-circle"></i>
+            </div>
+            <span>Login/Register</span>
         </div>
+    </div>
     </nav>
     <div class="form-container">
         <h1>Login</h1>
         <form action="login_process.php" method="post">
+            <div class="profile-section">
             <label for="username">
                 <i class="ph ph-envelope"></i> Username:
             </label>
             <input type="text" name="username" placeholder="Type username..." required>
-           
+            </div>
+            <div class="password-section">
             <label for="password">
                 <i class="ph ph-lock"></i> Password:
             </label>
-            <input type="password" name="password" placeholder="Type password..." required>
+            <input  type="password" name="password" placeholder="Type password..." required>
+        </div>
            
-            <input type="submit" value="Login">
+            <input class="btn-proses" type="submit" value="Login">
         </form>
 
 
-        <p>Don't have an account? <a href="register.php">Sign up here!</a></p>
+        <p class="login-footer"> Don't have an account? <a href="register.html">Sign up here!</a></p>
     </div>
 </body>
 </html>
