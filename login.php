@@ -18,10 +18,10 @@ if (isset($_SESSION['email'])) {
     <nav class="navbar">
         <div class="nav-container">
         <div class="nav-links">  
-            <a href="index.php">Home</a>
-            <a href="event.php">Event</a>
-            <a href="payment.php">Payment</a>
-            <a href="reminder.php">Reminder</a>
+            <a href="#">Home</a>
+            <a href="#">Event</a>
+            <a href="#">Payment</a>
+            <a href="#">Reminder</a>
         </div>
         <div class="nav-login">
             <div class="nav-profile">
