@@ -1,3 +1,10 @@
+<?php 
+session_start();
+if (isset($_SESSION['email'])) {
+    header("Location: dashboard.php");
+    // exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,7 +33,7 @@
     </nav>
     <div class="login-container">
         <h1>Login</h1><br>
-        <form action="login_process.php" method="post">
+        <form action="proses_autentikasi.php" method="post">
             <div class="profile-section">
             <label for="username">
                 <i class="ph ph-envelope"></i> Email :
@@ -42,8 +49,6 @@
            
             <input class="btn-login" type="submit" value="Login">
         </form>
-
-
         <p class="login-footer"> Don't have an account? <a href="register.html">Sign up here!</a></p>
     </div>
 </body>
