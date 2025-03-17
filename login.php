@@ -5,8 +5,7 @@ if (isset($_SESSION['email'])) {
     // exit();
 }
 ?>
-<!DOCTYPE html>
-<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -52,4 +51,3 @@ if (isset($_SESSION['email'])) {
         <p class="login-footer"> Don't have an account? <a href="register.html">Sign up here!</a></p>
     </div>
 </body>
-</html>

@@ -6,8 +6,6 @@ if (!isset($_SESSION['email'])) {
 }
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -43,4 +41,3 @@ if (!isset($_SESSION['email'])) {
         <p>&copy; 2025 Your Website. All Rights Reserved.</p>
     </footer>
 </body>
-</html>
