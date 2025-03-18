@@ -31,7 +31,8 @@ body {
 
 .navbar {
     background-color: black;
-    padding: 15px 20px;
+    padding: 15px 200px; 
+    /* ganti buat navbar biar sama kek login */
     display: flex;
     justify-content: center;
     width: 100%;
@@ -268,4 +269,187 @@ input {
         height: 30px;
         font-size: 16px;
     }
+}
+
+
+/* dashboard section 1, belum dikoding sama kath*/
+.dashboard-intro {
+    color :azure;
+}
+
+
+/* dashboard section 2 */
+.event {
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+.event-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.event-item {
+    flex-basis: 30%;
+    margin: 15px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.event-img {
+    max-width: 100%;
+    height: auto;
+}
+
+.event-details {
+    display: flex;
+    align-items: flex-start;
+}
+
+.date {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #333;
+    text-align: left;
+    font-size: 24px;
+    margin-right: 20px;
+}
+
+.desc {
+    text-align: left; 
+    max-width: 60%;
+}
+
+.desc h2 {
+    font-size: 1.2rem;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.desc p {
+    color: #666;
+    text-align: left;
+    margin: 5px 0 0;
+}
+
+.event-info h2 {
+    font-size: 1.2rem;
+    color: #333;
+    margin: 10px 0;
+    text-transform: uppercase;
+}
+
+.event-info p {
+    color: #666;
+    text-align: left;
+}
+
+.load-more {
+    margin-top: 30px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.load-more:hover {
+    background-color: #0056b3;
+}
+
+/* dashboard section 3 */
+#add {
+    background-color: black;
+    color: white;
+    padding: 50px 0;
+}
+
+.add-container {
+    width: 40%;
+    margin: 0 auto;
+}
+
+.right-side {
+    text-align: left;
+}
+
+.right-side h1 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    text-transform: uppercase;
+}
+
+.right-side p {
+    text-align: left;
+}
+.create-event-btn {
+    background-color: #2196F3; 
+    color: white; 
+    border: none;
+    padding: 10px 20px; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: background-color 0.3s; 
+}
+
+.create-event-btn:hover {
+    background-color: #1976D2; 
+}
+
+/* dashboard section 4 */
+.review {
+    text-align: center;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+.review h2 {
+    font-family: 'Arial', sans-serif;
+    color: #4B0082;
+    margin-bottom: 20px;
+}
+
+.review-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.review-item {
+    width: 30%;
+}
+
+.review-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+.star {
+    font-size: 20px;
+    color: #FFD700; 
+}
+
+.star.filled {
+    color: #FFD700;
+}
+
+.star.half {
+    color: #FFD700;
 }
