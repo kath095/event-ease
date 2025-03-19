@@ -32,6 +32,30 @@ if (!isset($_SESSION['email'])) {
     </header>
 
     <main>
+    <section class="slider-container">
+        <div class="slider-item">
+                <img src="assets/img1.jpg" alt="" class="slider-img" />
+                <div class="slider-content">
+                    <h1 class="slider-title">Welcome to EventEase</h1>
+                    <p class="slider-desc">Manage your events, payments, and reminders easily.</p>
+                </div>
+        </div>
+        <div class="slider-item">
+                <img src="assets/img2.jpg"alt="" class="slider-img" />
+                <div class="slider-content">
+                    <h1 class="slider-title">Welcome to EventEase</h1>
+                    <p class="slider-desc">Manage your events, payments, and reminders easily.</p>
+                </div>
+        </div>
+        <div class="slider-item">
+                <img src="assets/img3.jpg"alt="" class="slider-img" />
+                <div class="slider-content">
+                    <h1 class="slider-title">Welcome to EventEase</h1>
+                    <p class="slider-desc">Manage your events, payments, and reminders easily.</p>
+                </div>
+        </div>
+        </section>
+
         <section class="dashboard-content">
             <h1>Welcome to Your Dashboard</h1>
             <p>Manage your events, payments, and reminders easily.</p>
@@ -229,4 +253,5 @@ if (!isset($_SESSION['email'])) {
     </div>
         <p>&copy; 2025 EventEase. All Rights Reserved.</p>
     </footer>
+    <script src="sliderdashboard.js" defer></script>
 </body>
