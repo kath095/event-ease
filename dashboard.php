@@ -14,7 +14,7 @@ if (!isset($_SESSION['email'])) {
     <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
 </head>
 <body>
-    <header>
+    <header class="header-dashboard">
         <nav class="navbar">
             <div class="nav-container">
                 <div class="nav-links">
@@ -28,6 +28,7 @@ if (!isset($_SESSION['email'])) {
                     <a href="logout.php" class="btn-logout">Logout</a>
                 </div>
             </div>
+
         </nav>
     </header>
 
@@ -251,7 +252,7 @@ if (!isset($_SESSION['email'])) {
             </form>
         </div>
     </div>
-        <p>&copy; 2025 EventEase. All Rights Reserved.</p>
+        <p class = "cr">&copy; 2025 EventEase. All Rights Reserved.</p>
     </footer>
     <script src="sliderdashboard.js" defer></script>
 </body>

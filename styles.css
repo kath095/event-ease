@@ -32,11 +32,15 @@ body {
 
 .navbar {
     background-color: black;
-    padding: 15px 200px; 
-    /* ganti buat navbar biar sama kek login */
+    padding: 15px 200px;
     display: flex;
     justify-content: center;
-    width: 100%;
+    width: 100vw;
+    height: 48px;
+    position: fixed; /* Membuat navbar tetap di tempat saat scroll */
+    top: 0; /* Pastikan navbar ada di bagian atas layar */
+    left: 0;
+    z-index: 1000; /* Supaya navbar tetap di atas elemen lain */
 }
 
 .nav-container {
@@ -65,7 +69,7 @@ body {
     font-size: 16px;
     display: flex;
     gap: 70px;
-    padding-left: 70px
+    padding-left: 70px;
 }
 
 .nav-login {
@@ -79,8 +83,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 36px;
-    height: 36px;
+    width: 25px;
+    height: 25px;
     color: black;
     background-color: white;
     border-radius: 50%;
@@ -272,14 +276,12 @@ input {
     }
 }
 
-
 /* dashboard section 1, belum dikoding sama kath*/
 .slider-container { 
     position: relative;
     width: 100vw;
     height: 100vh;
     background-color: black;
-    overflow: hidden;
 }
 
 .slider-container .slider-item {
@@ -368,12 +370,13 @@ input {
     background-color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     position: relative;
-    overflow: hidden;
+   
 }
 
 .event-img {
     max-width: 100%;
     height: auto;
+    border-radius: 5px;
 }
 
 .event-details {
@@ -526,6 +529,7 @@ input {
     color: #fff;
     padding: 50px 5px;
     text-align: left;
+    width: 100vw;
 }
 
 .footer-container {
@@ -632,6 +636,8 @@ input {
     border-radius: 20px;
     flex: 1;
     outline: none;
+    text-align: left;
+    padding-top: 23px; /* nyesuain sendiri*/
 }
 
 .subscribe-btn {
@@ -652,4 +658,8 @@ input {
 .footer p {
     text-align: left;
     margin-top: 20px;
+}
+.footer .cr{
+    position: relative;
+    left: 20px;
 }
