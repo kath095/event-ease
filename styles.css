@@ -477,7 +477,7 @@ input {
 .review {
     text-align: center;
     margin: 20px auto;
-    max-width: 800px;
+    max-width: 1300px;
 }
 
 .review h2 {
@@ -524,14 +524,15 @@ input {
 .footer {
     background-color: #0A1A2C;
     color: #fff;
-    padding: 50px 20px;
+    padding: 50px 5px;
     text-align: left;
 }
 
 .footer-container {
     display: flex;
     justify-content: space-between;
-    max-width: 1200px;
+    max-width: 1400px; 
+    /* lebar kanan kiri */
     margin: 0 auto;
     flex-wrap: wrap;
 }
@@ -567,17 +568,26 @@ input {
     border-radius: 50%;
 }
 
-.footer-center-left h4,
+.footer-center-left h4 {
+    font-size: 1.2rem;
+    padding-left: 100px;
+}
 .footer-center-right h4 {
     font-size: 1.2rem;
     margin-bottom: 10px;
     font-weight: bold;
 }
 
-.footer-center-left ul,
+.footer-center-left ul {
+    list-style: none;
+    padding-left: 100px;
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
 .footer-center-right ul {
     list-style: none;
-    padding: 0;
+    padding-top: 20px;
+    padding-bottom: 10px;
 }
 
 .footer-center-left li,
@@ -595,11 +605,13 @@ input {
     font-size: 1.2rem;
     margin-bottom: 10px;
     font-weight: bold;
+    margin-left: -100px;
 }
 
 .footer-right p {
     font-size: 1rem;
     margin-bottom: 15px;
+    margin-left: -100px;
 }
 
 .email-container {
@@ -608,8 +620,9 @@ input {
     gap: 10px;
     background: white;
     padding: 5px;
-    border-radius: 25px;
+    border-radius: 100px;
     box-shadow: 0 2px 5px rgba(255, 255, 255, 0.2);
+    margin-left: -100px;
 }
 
 .footer-right input {
@@ -622,16 +635,18 @@ input {
 }
 
 .subscribe-btn {
-    padding: 10px 20px;
+    padding: 20px 20px;
     background-color: #007BFF;
     color: white;
     border: none;
-    border-radius: 20px;
+    border-radius: 100px;
     cursor: pointer;
+    margin-left: -100px;
 }
 
 .subscribe-btn:hover {
     background-color: #0056b3;
+    margin-left: -100px;
 }
 
 .footer p {

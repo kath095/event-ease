@@ -56,10 +56,10 @@ if (!isset($_SESSION['email'])) {
         </div>
         </section>
 
-        <section class="dashboard-content">
+        <!-- <section class="dashboard-content">
             <h1>Welcome to Your Dashboard</h1>
             <p>Manage your events, payments, and reminders easily.</p>
-        </section>
+        </section> -->
 
         <section id="event">
             <div class="event container">
