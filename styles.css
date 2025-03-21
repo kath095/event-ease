@@ -23,7 +23,7 @@
 
 body {
     overflow-x: hidden;
-    background-color: #0d1b2a;
+    background-color: whitesmoke;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -484,7 +484,7 @@ input {
 }
 
 .review h2 {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Satoshi', sans-serif;
     color: #4B0082;
     margin-bottom: 20px;
 }

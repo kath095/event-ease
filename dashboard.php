@@ -35,7 +35,7 @@ if (!isset($_SESSION['email'])) {
     <main>
     <section class="slider-container">
         <div class="slider-item">
-                <img src="assets/img1.jpg" alt="" class="slider-img" />
+                <img src="assets/img4.jpg" alt="" class="slider-img" />
                 <div class="slider-content">
                     <h1 class="slider-title">Welcome to EventEase</h1>
                     <p class="slider-desc">Manage your events, payments, and reminders easily.</p>
@@ -57,17 +57,35 @@ if (!isset($_SESSION['email'])) {
         </div>
         </section>
 
-        <!-- <section class="dashboard-content">
-            <h1>Welcome to Your Dashboard</h1>
-            <p>Manage your events, payments, and reminders easily.</p>
-        </section> -->
-
         <section id="event">
             <div class="event container">
                 <h1>Upcoming Events</h1>
+            
+            <!-- <div class="filter-buttons">
+                <button class="filter-btn">
+                    Event Type <i class="fas fa-chevron-down"></i>
+                </button>
+                <button class="filter-btn">
+                    Any Category <i class="fas fa-chevron-down"></i>
+                </button>
+             </div> -->
+
             <div class="event-bottom">
                 <div class="event-item">
-                    <img src="assets/img1.jpg" alt="Event" class="event-img" />
+                    <img src="assets/event1.png" alt="Event" class="event-img" />
+                    <div class="event-details">
+                        <div class="date">
+                            <span>APR</span><br>
+                            <span>14</span>
+                        </div>
+                        <div class="desc">
+                            <h2>EVENT NAME</h2>
+                            <p>some event description</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="event-item">
+                    <img src="assets/event1.png" alt="Event" class="event-img" />
                     <div class="event-details">
                         <div class="date">
                             <span>MTH</span><br>
@@ -80,7 +98,7 @@ if (!isset($_SESSION['email'])) {
                     </div>
                 </div>
                 <div class="event-item">
-                    <img src="assets/img1.jpg" alt="Event" class="event-img" />
+                    <img src="assets/event1.png" alt="Event" class="event-img" />
                     <div class="event-details">
                         <div class="date">
                             <span>MTH</span><br>
@@ -93,7 +111,7 @@ if (!isset($_SESSION['email'])) {
                     </div>
                 </div>
                 <div class="event-item">
-                    <img src="assets/img1.jpg" alt="Event" class="event-img" />
+                    <img src="assets/event1.png" alt="Event" class="event-img" />
                     <div class="event-details">
                         <div class="date">
                             <span>MTH</span><br>
@@ -106,7 +124,7 @@ if (!isset($_SESSION['email'])) {
                     </div>
                 </div>
                 <div class="event-item">
-                    <img src="assets/img1.jpg" alt="Event" class="event-img" />
+                    <img src="assets/event1.png" alt="Event" class="event-img" />
                     <div class="event-details">
                         <div class="date">
                             <span>MTH</span><br>
@@ -119,20 +137,7 @@ if (!isset($_SESSION['email'])) {
                     </div>
                 </div>
                 <div class="event-item">
-                    <img src="assets/img1.jpg" alt="Event" class="event-img" />
-                    <div class="event-details">
-                        <div class="date">
-                            <span>MTH</span><br>
-                            <span>00</span>
-                        </div>
-                        <div class="desc">
-                            <h2>EVENT NAME</h2>
-                            <p>some event description</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="event-item">
-                    <img src="assets/img1.jpg" alt="Event" class="event-img" />
+                    <img src="assets/event1.png" alt="Event" class="event-img" />
                     <div class="event-details">
                         <div class="date">
                             <span>MTH</span><br>
@@ -166,7 +171,7 @@ if (!isset($_SESSION['email'])) {
             <h2>Review</h2>
                 <div class="review-container">
                     <div class="review-item">
-                        <img src="assets/img1.jpg" alt="Utsuru 2.5">
+                        <img src="assets/review1.png" alt="Utsuru 2.5">
                         <h3>Utsuru 2.5</h3>
                             <div class="rating">
                             <span class="star filled">&#9733;</span>
@@ -177,7 +182,7 @@ if (!isset($_SESSION['email'])) {
                             </div>
                     </div>
                     <div class="review-item">
-                        <img src="assets/img1.jpg" alt="K-POP FEST 2.1">
+                        <img src="assets/review2.png" alt="K-POP FEST 2.1">
                         <h3>K-POP FEST 2.1</h3>
                             <div class="rating">
                             <span class="star filled">&#9733;</span>
@@ -188,7 +193,7 @@ if (!isset($_SESSION['email'])) {
                             </div>
                     </div>
                     <div class="review-item">
-                        <img src="assets/img1.jpg" alt="Workshop SPACE SCIFI">
+                        <img src="assets/review3.png" alt="Workshop SPACE SCIFI">
                         <h3>Workshop SPACE SCIFI</h3>
                             <div class="rating">
                             <span class="star filled">&#9733;</span>
