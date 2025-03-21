@@ -60,15 +60,16 @@ if (!isset($_SESSION['email'])) {
         <section id="event">
             <div class="event container">
                 <h1>Upcoming Events</h1>
+                <div class="filter-buttons">
+            <button class="filter-btn">
+                Event Type <i class="ph ph-caret-down"></i>
+            </button>
+            <button class="filter-btn">
+                Any Category <i class="ph ph-caret-down"></i>
+            </button>
+        </div>
             
-            <!-- <div class="filter-buttons">
-                <button class="filter-btn">
-                    Event Type <i class="fas fa-chevron-down"></i>
-                </button>
-                <button class="filter-btn">
-                    Any Category <i class="fas fa-chevron-down"></i>
-                </button>
-             </div> -->
+            
 
             <div class="event-bottom">
                 <div class="event-item">
@@ -76,7 +77,7 @@ if (!isset($_SESSION['email'])) {
                     <div class="event-details">
                         <div class="date">
                             <span>APR</span><br>
-                            <span>14</span>
+                            <strong>14</strong>
                         </div>
                         <div class="desc">
                             <h2>EVENT NAME</h2>
@@ -89,7 +90,7 @@ if (!isset($_SESSION['email'])) {
                     <div class="event-details">
                         <div class="date">
                             <span>MTH</span><br>
-                            <span>00</span>
+                            <strong>00</strong>
                         </div>
                         <div class="desc">
                             <h2>EVENT NAME</h2>
@@ -102,7 +103,7 @@ if (!isset($_SESSION['email'])) {
                     <div class="event-details">
                         <div class="date">
                             <span>MTH</span><br>
-                            <span>00</span>
+                            <strong>00</strong>
                         </div>
                         <div class="desc">
                             <h2>EVENT NAME</h2>
@@ -115,7 +116,7 @@ if (!isset($_SESSION['email'])) {
                     <div class="event-details">
                         <div class="date">
                             <span>MTH</span><br>
-                            <span>00</span>
+                            <strong>00</strong>
                         </div>
                         <div class="desc">
                             <h2>EVENT NAME</h2>
@@ -128,7 +129,7 @@ if (!isset($_SESSION['email'])) {
                     <div class="event-details">
                         <div class="date">
                             <span>MTH</span><br>
-                            <span>00</span>
+                            <strong>00</strong>
                         </div>
                         <div class="desc">
                             <h2>EVENT NAME</h2>
@@ -141,7 +142,7 @@ if (!isset($_SESSION['email'])) {
                     <div class="event-details">
                         <div class="date">
                             <span>MTH</span><br>
-                            <span>00</span>
+                            <strong>00</strong>
                         </div>
                         <div class="desc">
                             <h2>EVENT NAME</h2>
@@ -153,20 +154,18 @@ if (!isset($_SESSION['email'])) {
                 <button class="load-more">Load More</button>
             </div>
         </section>
-
-        <section id="add">
-            <div class="add-container">
-                <div class="left-side">
-                    <!-- sementara masih blank -->
-                </div>
-                <div class="right-side">
-                    <h1>Make your own Event</h1>
-                    <p>Come and join us to make your event more fun and...</p>
-                    <button class="create-event-btn">Create Events</button>
-                </div>
+        
+        <section class="create-events">
+        <div class="create-events-container">
+            <div class="create-events-left"></div>
+            <div class="create-events-right">
+                <h2>Make your own Event</h2>
+                <p>Come and join us to make your event more <br>fun and......</p>
+                <a href="#" class="btn-create-event">Create Events</a>
             </div>
-        </section>
-
+        </div>
+    </section>
+    
         <section class="review">
             <h2>Review</h2>
                 <div class="review-container">
