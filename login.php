@@ -34,10 +34,10 @@ if (isset($_SESSION['email'])) {
         <h1>Login</h1><br>
         <form action="proses_autentikasi.php" method="post">
             <div class="profile-section">
-            <label for="username">
+            <label for="email">
                 <i class="ph ph-envelope"></i> Email :
             </label>
-            <input type="text" name="username" placeholder="Type here..." required>
+            <input type="text" name="email" placeholder="Type here..." required>
             </div>
             <div class="password-section">
             <label for="password">
