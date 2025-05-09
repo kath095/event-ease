@@ -717,3 +717,187 @@ input {
     position: relative;
     left: 20px;
 }
+
+/* profile user */
+.profile-container {
+     width: 75%;
+     top: 80px;
+    margin: -20px auto 4px;    
+    padding: 80px;
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;             
+}
+/* Profile Left */
+.profile-left {
+    display: flex;
+    justify-content: center;
+}
+
+.profile-left .profile-pic {
+    width: 250px; 
+    height: 250px; 
+    background: #ddd;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.profile-pic::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* transparansi hitam */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.profile-pic:hover::after {
+    opacity: 1;
+}
+
+.profile-pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+.profile-pic .icons {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: #fff;
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    padding: 120px 50px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 2; 
+    gap: 4px;
+}
+.profile-pic:hover .icons {
+    opacity: 1;
+}
+.profile-pic .icons i {
+    font-size: 22px;
+    cursor: pointer;
+    color: #000; 
+    transition: all 0.3s ease;
+}
+.profile-pic .icons i:hover {
+    color: #045fc0;
+}
+/* Profile Right */
+.profile-right { 
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    flex-grow: 1;
+    font-size: 30px;   
+}
+.input-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+    color: #0D1D39;
+    margin-left: 5px;
+    width: 180px;
+    font-size: 20px;   
+}
+.input-with-icon {
+    position: relative; 
+    width: 100%;
+}
+.input-with-icon input {
+    width: 100%;
+    padding: 10px 35px 10px 10px; 
+    font-size: 18px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    background: unset;
+}
+ .input-with-icon i {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    color: #000000;
+    cursor: pointer;
+    font-size: 18px;
+    transform: translateY(-50%);
+}
+.input-with-icon i:hover {
+    color: #045fc0;
+    font-size: 1.3rem;
+}
+/* Info List */
+.info-list {
+    width: 95%;
+    margin: 2px auto 0 ; 
+    padding-top: 25px; 
+    display: flex;
+    position: relative;
+    z-index: 100;
+    flex-direction: column;
+}
+.info-list:hover{
+
+}
+.info-item {
+    width: 68%;
+    margin: 2px auto 7px;
+    padding: 10px 4px; 
+    text-decoration: none;
+    letter-spacing: 1px; 
+    font-weight: bold;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    border-radius: 4px;
+    color: #0D1D39;
+    transition: all 0.3s ease;
+}
+.info-item i {
+    font-size: 20px;
+    color: #000000;   
+}
+/* Logout Button */
+.logout-container {
+    text-align: center;
+    justify-content: center; 
+    margin: 50px auto;  
+}
+.logout-btn {
+    padding: 9px 45px; 
+    background: var(--Background-Brand-Default, rgba(44, 44, 44, 1));
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    border-top: 1px solid var(--Border-Brand-Default, rgba(44, 44, 44, 1));
+    cursor: pointer;
+    letter-spacing: 1px; 
+    transition: all 0.3s ease;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.logout-btn:hover {
+    padding: 9px 48px;
+    font-size: 17px;
+}
+
