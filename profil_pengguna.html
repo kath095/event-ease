@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+</head>
+<body>
+    <header class="header-dashboard">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-links">
+                    <a href="dashboard.php">Home</a>
+                    <a href="event.php">Event</a>
+                    <a href="payment.php">Payment</a>
+                    <a href="reminder.php">Reminder</a>
+                </div>
+               <div class="nav-login">
+                 <span class="user-email"></span>
+                    <a href="profil_pengguna.html" class="user-email">Welcome, <?= htmlspecialchars($_SESSION['email']); ?></a>
+                    <a href="logout.php" class="btn-logout">Logout</a>
+               </div>
+            </div>
+        </nav>
+    </header>
+
+<section class="profile-container">
+  <div class="profile-left">
+    <div class="profile-pic">
+      <img src="prfile_user" id="profile-image">
+      <input type="file" id="upload-photo" accept="image/*" style="display: none;">
+      <div class="icons">
+        <i class="ph ph-trash" onclick="hapusFoto()"></i>
+        <i class="ph ph-pencil" onclick="document.getElementById('upload-photo').click()"></i>
+      </div>
+    </div>
+  </div>
+  <div class="profile-right">
+    <div class="input-group">
+      <label>Name :</label>
+      <div class="input-with-icon">
+        <input type="text" placeholder="Name" readonly>
+        <i class="ph ph-pencil"></i>
+      </div>
+    </div>
+    <div class="input-group">
+      <label>Email :</label>
+      <div class="input-with-icon">
+        <input type="email" placeholder="@gmail" readonly>
+        <i class="ph ph-pencil"></i>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="info-list">
+  <a href="wishlist.php" class="info-item">
+    Wishlist <i class="ph ph-caret-right"></i>
+  </a>
+  <a href="/activity.html" class="info-item">
+    Activity History <i class="ph ph-caret-right"></i>
+  </a>
+  <a href="/reminder.html" class="info-item">
+    Reminder <i class="ph ph-caret-right"></i>
+  </a>
+</div>
+
+<div class="logout-container">
+  <a href="login.php" class="logout-btn">Logout</a>
+</div>
+
+</div>
+ <script>
+  //  GANTI & HAPUS FOTO 
+  const uploadInput = document.getElementById("upload-photo");
+  const profileImage = document.getElementById("profile-image");
+
+  uploadInput.addEventListener("change", function () {
+    const file = uploadInput.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = function (e) {
+        profileImage.src = e.target.result;
+      };
+      reader.readAsDataURL(file);
+    }
+  });
+
+  // hapus foto
+  function hapusFoto() {
+    profileImage.src = ""; 
+    uploadInput.value = ""; 
+  }
+
+  // UBAH NAMA & EMAIL 
+  const editIcons = document.querySelectorAll(".input-with-icon i");
+
+  editIcons.forEach(icon => {
+    icon.addEventListener("click", function () {
+      const input = this.previousElementSibling;
+
+      if (input.hasAttribute("readonly")) {
+        input.removeAttribute("readonly");
+        input.focus();
+        this.classList.replace("ph-pencil", "ph-check");
+        this.style.color = "green";
+
+      } else {
+      
+        input.setAttribute("readonly", true);
+        this.classList.replace("ph-check", "ph-pencil");
+        this.style.color = "#000";
+
+        console.log("Data disimpan:", input.value);
+        // fetch/ajax 
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
