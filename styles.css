@@ -92,7 +92,7 @@ body {
 }
 
 
-<<<<<<< HEAD
+
 .user-email {
     color: white; /* Mengubah warna teks menjadi putih */
     text-decoration: none; /* Menghilangkan garis bawah */
@@ -102,9 +102,6 @@ body {
     text-decoration: none; /* Pastikan garis bawah juga hilang saat hover */
 }
 
-
-=======
->>>>>>> dd8901a479a9198614e27e080129bc88e3c7a205
 .register-container {
     background-color: #16324F;
     width: 720px;
@@ -729,7 +726,6 @@ input {
 .footer .cr{
     position: relative;
     left: 20px;
-<<<<<<< HEAD
 }
 
 /* profile user */
@@ -1043,6 +1039,26 @@ body {
 .logout-btn:hover {
     padding: 9px 48px;
     font-size: 17px;
-=======
->>>>>>> dd8901a479a9198614e27e080129bc88e3c7a205
 }
+
+.desc h2 a {
+    text-decoration: none;
+    color: inherit;
+}
+.desc h2 a:hover {
+    text-decoration: underline;
+    color: #007BFF;
+}
+
+.tickets-section-full {
+    width: 100%;
+    background: #0a1a3f;
+    color: white;
+}
+
+.tickets-section {
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem;
+}
+
