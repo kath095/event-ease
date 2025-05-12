@@ -14,7 +14,7 @@ if (!isset($_SESSION['email'])) {
     <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
 </head>
 <body>
-<<<<<<< HEAD
+
      <header class="header-dashboard">
         <nav class="navbar">
             <div class="nav-container">
@@ -30,10 +30,6 @@ if (!isset($_SESSION['email'])) {
                     <a href="logout.php" class="btn-logout">Logout</a>
                </div>
             </div>
-=======
-
-
->>>>>>> dd8901a479a9198614e27e080129bc88e3c7a205
         </nav>
     </header>
 
@@ -85,7 +81,7 @@ if (!isset($_SESSION['email'])) {
                             <strong>14</strong>
                         </div>
                         <div class="desc">
-                            <h2>EVENT NAME</h2>
+                            <a href="booked.php?event=event1">EVENT NAME1</a>
                             <p>some event description</p>
                         </div>
                     </div>
@@ -98,7 +94,7 @@ if (!isset($_SESSION['email'])) {
                             <strong>00</strong>
                         </div>
                         <div class="desc">
-                            <h2>EVENT NAME</h2>
+                            <a href="booked.php?event=event2">EVENT NAME2</a>
                             <p>some event description</p>
                         </div>
                     </div>
@@ -111,7 +107,7 @@ if (!isset($_SESSION['email'])) {
                             <strong>00</strong>
                         </div>
                         <div class="desc">
-                            <h2>EVENT NAME</h2>
+                            <a href="booked.php?event=event3">EVENT NAME3</a>
                             <p>some event description</p>
                         </div>
                     </div>
@@ -124,7 +120,7 @@ if (!isset($_SESSION['email'])) {
                             <strong>00</strong>
                         </div>
                         <div class="desc">
-                            <h2>EVENT NAME</h2>
+                          <a href="booked.php?event=event4">EVENT NAME4</a>
                             <p>some event description</p>
                         </div>
                     </div>
@@ -137,7 +133,7 @@ if (!isset($_SESSION['email'])) {
                             <strong>00</strong>
                         </div>
                         <div class="desc">
-                            <h2>EVENT NAME</h2>
+                            <a href="booked.php?event=event5">EVENT NAME5</a>
                             <p>some event description</p>
                         </div>
                     </div>
@@ -150,7 +146,7 @@ if (!isset($_SESSION['email'])) {
                             <strong>00</strong>
                         </div>
                         <div class="desc">
-                            <h2>EVENT NAME</h2>
+                            <a href="booked.php?event=event6">EVENT NAME6</a>
                             <p>some event description</p>
                         </div>
                     </div>
@@ -166,11 +162,8 @@ if (!isset($_SESSION['email'])) {
             <div class="create-events-right">
                 <h2>Make your own Event</h2>
                 <p>Come and join us to make your event more <br>fun and......</p>
-<<<<<<< HEAD
                 <a href="kelolaevent.php" class="btn-create-event">Create Events</a>
-=======
                 <a href="#" class="btn-create-event">Create Events</a>
->>>>>>> dd8901a479a9198614e27e080129bc88e3c7a205
             </div>
         </div>
     </section>
