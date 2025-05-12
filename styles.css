@@ -92,6 +92,7 @@ body {
 }
 
 
+<<<<<<< HEAD
 .user-email {
     color: white; /* Mengubah warna teks menjadi putih */
     text-decoration: none; /* Menghilangkan garis bawah */
@@ -102,6 +103,8 @@ body {
 }
 
 
+=======
+>>>>>>> dd8901a479a9198614e27e080129bc88e3c7a205
 .register-container {
     background-color: #16324F;
     width: 720px;
@@ -726,6 +729,7 @@ input {
 .footer .cr{
     position: relative;
     left: 20px;
+<<<<<<< HEAD
 }
 
 /* profile user */
@@ -1039,4 +1043,6 @@ body {
 .logout-btn:hover {
     padding: 9px 48px;
     font-size: 17px;
+=======
+>>>>>>> dd8901a479a9198614e27e080129bc88e3c7a205
 }
