@@ -17,23 +17,23 @@ if (!isset($_SESSION['email'])) {
     <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
 </head>
 <body>
-  <header class="header-dashboard">
-        <nav class="navbar">
-            <div class="nav-container">
-                <div class="nav-links">
-                    <a href="dashboard.php">Home</a>
-                    <a href="event.php">Event</a>
-                    <a href="payment.php">Payment</a>
-                    <a href="reminder.php">Reminder</a>
-                </div>
-               <div class="nav-login">
-                 <span class="user-email"></span>
-                    <a href="profil_pengguna.html" class="user-email">Welcome, <?= htmlspecialchars($_SESSION['email']); ?></a>
-                    <a href="logout.php" class="btn-logout">Logout</a>
-               </div>
+<header class="header-dashboard">
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-links">
+                <a href="dashboard.php">Home</a>
+                <a href="event.php">Event</a>
+                <a href="payment.php">Payment</a>
+                <a href="reminder.php">Reminder</a>
             </div>
-        </nav>
-    </header>
+            <div class="nav-login">
+                <span class="user-email"></span>
+                <a href="profil_pengguna.html" class="user-email">Welcome, <?= htmlspecialchars($_SESSION['email']); ?></a>
+                <a href="logout.php" class="btn-logout">Logout</a>
+            </div>
+        </div>
+    </nav>
+</header>
 
 <main>
     <section class="hero-text-section">
@@ -77,21 +77,19 @@ if (!isset($_SESSION['email'])) {
                 <div class="form-group time-group">
                     <div>
                         <label>Start Time:</label>
-                        <select name="start_time">
-                            <option>Choose</option>
-                        </select>
+                        <input type="text" name="start_time" placeholder="00:00:00">
                     </div>
                     <div>
                         <label>End Time:</label>
-                        <select name="end_time">
-                            <option>Choose</option>
-                        </select>
+                        <input type="text" name="end_time" placeholder="00:00:00">
                     </div>
                 </div>
                 <div class="form-group">
                     <label>Type:</label>
                     <select name="type">
-                        <option>Choose</option>
+                        <option value="">Choose</option>
+                        <option value="Offline">Offline</option>
+                        <option value="Online">Online</option>
                     </select>
                 </div>
                 <div class="form-group">
@@ -101,18 +99,15 @@ if (!isset($_SESSION['email'])) {
                 <div class="form-group">
                     <label>Category:</label>
                     <select name="category">
-                        <option>Choose</option>
+                        <option value="">Choose</option>
+                        <option value="Olahraga">Olahraga</option>
+                        <option value="Hiburan">Hiburan</option>
+                        <option value="Edukasi">Edukasi</option>
                     </select>
                 </div>
                 <div class="form-group">
                     <label>Attendee Capacity:</label>
-                    <input type="number" name="capacity">
-                </div>
-                <div class="form-group">
-                    <label>Ticket Type:</label>
-                    <select name="ticket_type">
-                        <option>Choose</option>
-                    </select>
+                    <input type="text" name="capacity" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
                 </div>
                 <div class="form-group">
                     <label>Price:</label>
@@ -120,11 +115,11 @@ if (!isset($_SESSION['email'])) {
                 </div>
                 <div class="form-group checkbox-wrapper">
                     <input type="checkbox" id="agreement" name="agreement" required>
-                        <label for="agreement" class="checkbox-label">
-                            I declare that the event data I have filled in is correct, and 
-                            <span class="important-text">EventEase is not responsible</span> 
-                            for any false information provided by me.
-                        </label>
+                    <label for="agreement" class="checkbox-label">
+                        I declare that the event data I have filled in is correct, and 
+                        <span class="important-text">EventEase is not responsible</span> 
+                        for any false information provided by me.
+                    </label>
                 </div>
                 <button type="submit" class="submit-btn">Submit</button>
             </form>
@@ -136,7 +131,6 @@ if (!isset($_SESSION['email'])) {
                     const yyyy = today.getFullYear();
                     const mm = String(today.getMonth() + 1).padStart(2, '0');
                     const dd = String(today.getDate()).padStart(2, '0');
-
                     const minDate = `${yyyy}-${mm}-${dd}`;
                     dateInput.setAttribute('min', minDate);
                 });
@@ -149,7 +143,7 @@ if (!isset($_SESSION['email'])) {
                 There's no event here
             </div>
         </div>
-        </section>
+    </section>
 </main>
 
 <footer class="footer">
@@ -163,8 +157,6 @@ if (!isset($_SESSION['email'])) {
                 <a href="#" class="social-icon"><i class="ph ph-instagram-logo"></i></a>
             </div>
         </div>
-
-        <!-- Center Left Side (Plan Events) -->
         <div class="footer-center-left">
             <h4>Plan Events</h4>
             <ul>
@@ -174,8 +166,6 @@ if (!isset($_SESSION['email'])) {
                 <li><a href="#">Online Events</a></li>
             </ul>
         </div>
-
-        <!-- Center Right Side (Eventick) -->
         <div class="footer-center-right">
             <h4>Eventick</h4>
             <ul>
@@ -188,8 +178,6 @@ if (!isset($_SESSION['email'])) {
                 <li><a href="#">Terms</a></li>
             </ul>
         </div>
-
-        <!-- Right Side (Stay In The Loop) -->
         <div class="footer-right">
             <h4>Stay In The Loop</h4>
             <p>Join our mailing list to stay in the loop with our newest events and concerts.</p>
@@ -201,7 +189,7 @@ if (!isset($_SESSION['email'])) {
             </form>
         </div>
     </div>
-        <p class = "cr">&copy; 2025 EventEase. All Rights Reserved.</p>
-    </footer>
+    <p class="cr">&copy; 2025 EventEase. All Rights Reserved.</p>
+</footer>
 </body>
 </html>
