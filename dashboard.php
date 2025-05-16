@@ -15,7 +15,8 @@ if (!isset($_SESSION['email'])) {
 </head>
 
 <body>
-    <header class="header-dashboard">
+
+     <header class="header-dashboard">
         <nav class="navbar">
             <div class="nav-container">
                 <div class="nav-links">
@@ -28,12 +29,12 @@ if (!isset($_SESSION['email'])) {
                         <a href="my_activity_history.php">Your Events</a>
                     <?php endif ?>
                 </div>
-                <div class="nav-login">
-                    <span class="user-email">Welcome, <?= htmlspecialchars($_SESSION['email']); ?></span>
+               <div class="nav-login">
+                 <span class="user-email"></span>
+                    <a href="profil_pengguna.html" class="user-email">Welcome, <?= htmlspecialchars($_SESSION['email']); ?></a>
                     <a href="logout.php" class="btn-logout">Logout</a>
-                </div>
+               </div>
             </div>
-
         </nav>
     </header>
 

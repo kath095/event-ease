@@ -94,6 +94,16 @@ body {
 }
 
 
+
+.user-email {
+    color: white; /* Mengubah warna teks menjadi putih */
+    text-decoration: none; /* Menghilangkan garis bawah */
+}
+
+.user-email:hover {
+    text-decoration: none; /* Pastikan garis bawah juga hilang saat hover */
+}
+
 .register-container {
     background-color: #16324F;
     width: 720px;
@@ -729,3 +739,338 @@ input {
     position: relative;
     left: 20px;
 }
+
+/* profile user */
+.profile-container {
+     width: 75%;
+     top: 80px;
+    margin: -20px auto 4px;    
+    padding: 80px;
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;             
+}
+/* Profile Left */
+.profile-left {
+    display: flex;
+    justify-content: center;
+}
+
+.profile-left .profile-pic {
+    width: 250px; 
+    height: 250px; 
+    background: #ddd;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.profile-pic::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* transparansi hitam */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.profile-pic:hover::after {
+    opacity: 1;
+}
+
+.profile-pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+.profile-pic .icons {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: #fff;
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    padding: 120px 50px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 2; 
+    gap: 4px;
+}
+.profile-pic:hover .icons {
+    opacity: 1;
+}
+.profile-pic .icons i {
+    font-size: 22px;
+    cursor: pointer;
+    color: #000; 
+    transition: all 0.3s ease;
+}
+.profile-pic .icons i:hover {
+    color: #045fc0;
+}
+/* Profile Right */
+.profile-right { 
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    flex-grow: 1;
+    font-size: 30px;   
+}
+.input-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+    color: #0D1D39;
+    margin-left: 5px;
+    width: 180px;
+    font-size: 20px;   
+}
+.input-with-icon {
+    position: relative; 
+    width: 100%;
+}
+.input-with-icon input {
+    width: 100%;
+    padding: 10px 35px 10px 10px; 
+    font-size: 18px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    background: unset;
+}
+ .input-with-icon i {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    color: #000000;
+    cursor: pointer;
+    font-size: 18px;
+    transform: translateY(-50%);
+}
+.input-with-icon i:hover {
+    color: #045fc0;
+    font-size: 1.3rem;
+}
+/* Info List */
+.info-list {
+    width: 95%;
+    margin: 2px auto 0 ; 
+    padding-top: 25px; 
+    display: flex;
+    position: relative;
+    z-index: 100;
+    flex-direction: column;
+}
+.info-list:hover{
+
+}
+.info-item {
+    width: 68%;
+    margin: 2px auto 7px;
+    padding: 10px 4px; 
+    text-decoration: none;
+    letter-spacing: 1px; 
+    font-weight: bold;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    border-radius: 4px;
+    color: #0D1D39;
+    transition: all 0.3s ease;
+}
+.info-item i {
+    font-size: 20px;
+    color: #000000;   
+}
+
+/* Reset & Basic */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #fff;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #000;
+  color: #fff;
+  padding: 10px 20px;
+}
+.navbar ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar li {
+  margin: 0 15px;
+}
+.navbar a {
+  color: white;
+  text-decoration: none;
+}
+.profile {
+  display: flex;
+  align-items: center;
+}
+.profile img {
+  width: 24px;
+  margin-right: 8px;
+}
+
+/* Wishlist */
+.wishlist-container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.wishlist-title {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.wishlist-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.wishlist-item {
+    position: relative;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.wishlist-item:hover {
+    transform: translateY(-5px);
+}
+
+.wishlist-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.wishlist-content {
+    padding: 12px;
+    position: relative;
+}
+
+.wishlist-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.wishlist-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    position: relative;
+}
+
+
+.btn-detail-event:hover {
+    background-color: #0b5ed7;
+}
+
+.btn-remove {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    background: none;
+    border: none;
+    color: #dc3545;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.btn-remove:hover {
+    color: #a71d2a;
+}
+
+.btn-detail-event {
+    background-color: #0D1D39;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 15px;
+    text-decoration: none;
+    border: none;
+}
+
+
+
+/* Logout Button */
+.logout-container {
+    text-align: center;
+    justify-content: center; 
+    margin: 50px auto;  
+}
+.logout-btn {
+    padding: 9px 45px; 
+    background: var(--Background-Brand-Default, rgba(44, 44, 44, 1));
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    border-top: 1px solid var(--Border-Brand-Default, rgba(44, 44, 44, 1));
+    cursor: pointer;
+    letter-spacing: 1px; 
+    transition: all 0.3s ease;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.logout-btn:hover {
+    padding: 9px 48px;
+    font-size: 17px;
+}
+
+.desc h2 a {
+    text-decoration: none;
+    color: inherit;
+}
+.desc h2 a:hover {
+    text-decoration: underline;
+    color: #007BFF;
+}
+
+.tickets-section-full {
+    width: 100%;
+    background: #0a1a3f;
+    color: white;
+}
+
+.tickets-section {
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem;
+}
+
