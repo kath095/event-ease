@@ -4,6 +4,24 @@ if (!isset($_SESSION['email'])) {
     header("Location: login.php");
     exit();
 }
+
+include('db.php');
+
+// Ambil email dari session
+$email = $_SESSION['email'];
+
+// Ambil user_id
+$stmt = $mysqli->prepare("SELECT user_id FROM users WHERE email = ?");
+$stmt->bind_param("s", $email);
+$stmt->execute();
+$result = $stmt->get_result();
+$user = $result->fetch_assoc();
+$user_id = $user['user_id'];
+
+// Ambil 1 event terbaru yang dibuat oleh user
+$event_result = $mysqli->query("SELECT * FROM events WHERE user_id = $user_id ORDER BY created_at DESC LIMIT 1");
+$latest_event = $event_result->fetch_assoc();
+
 ?>
 
 <!DOCTYPE html>
@@ -53,7 +71,7 @@ if (!isset($_SESSION['email'])) {
     <section class="form-section">
         <div class="form-left">
             <h2>Fill the form</h2>
-            <form action="#" method="POST" enctype="multipart/form-data">
+            <form action="proses_event.php" method="POST" enctype="multipart/form-data">
                 <div class="form-group">
                     <label>Title:</label>
                     <input type="text" name="title">
@@ -86,10 +104,10 @@ if (!isset($_SESSION['email'])) {
                 </div>
                 <div class="form-group">
                     <label>Type:</label>
-                    <select name="type">
+                    <select name="type" required>
                         <option value="">Choose</option>
-                        <option value="Offline">Offline</option>
-                        <option value="Online">Online</option>
+                        <option value="offline">Offline</option>
+                        <option value="online">Online</option>
                     </select>
                 </div>
                 <div class="form-group">
@@ -140,9 +158,30 @@ if (!isset($_SESSION['email'])) {
         <div class="form-right">
             <h2>Check your event</h2>
             <div class="preview-section">
-                There's no event here
+                <?php if ($latest_event): ?>
+                    <div style="text-align: left;">
+                        <?php
+                            if (!empty($latest_event['image'])) {
+                                $image_data = base64_encode($latest_event['image']);
+                                $image_src = 'data:image/jpeg;base64,' . $image_data;
+                                echo '<img src="' . $image_src . '" style="width: 100%; max-height: 200px; object-fit: cover; border-radius: 10px; margin-bottom: 10px;">';
+                            }
+                        ?>
+                        <h4><?= htmlspecialchars($latest_event['title']) ?></h4>
+                        <p><strong>Date:</strong> <?= $latest_event['event_date'] ?></p>
+                        <p><strong>Time:</strong> <?= $latest_event['event_start_time'] ?> - <?= $latest_event['event_end_time'] ?></p>
+                        <p><strong>Location:</strong> <?= htmlspecialchars($latest_event['location']) ?></p>
+                        <p><strong>Category:</strong> <?= $latest_event['category'] ?></p>
+                        <p><strong>Type:</strong> <?= $latest_event['event_type'] ?></p>
+                        <p><strong>Price:</strong> Rp <?= number_format($latest_event['price'], 0, ',', '.') ?></p>
+                    </div>
+                <?php else: ?>
+                    <p>No event created yet.</p>
+                <?php endif; ?>
             </div>
         </div>
+
+
     </section>
 </main>
 
