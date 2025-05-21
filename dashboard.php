@@ -167,7 +167,7 @@ if (!isset($_SESSION['email'])) {
                 <div class="create-events-right">
                     <h2>Make your own Event</h2>
                     <p>Come and join us to make your event more <br>fun and......</p>
-                    <a href="#" class="btn-create-event">Create Events</a>
+                    <a href="kelolaevent.php" class="btn-create-event">Create Events</a>
                 </div>
             </div>
         </section>

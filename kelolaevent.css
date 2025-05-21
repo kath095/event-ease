@@ -1,11 +1,14 @@
-/* body tetap */
+/* Desktop: > 992px
+Tablet: 768px - 992px
+Mobile: < 768px */
+
 body {
     margin: 0;
     background: #f8f9fa;
     font-family: 'Satoshi', sans-serif;
 }
 
-/* Hero Text Section */
+/* Hero Text Section - Desktop Style */
 .hero-text-section {
     padding-top: 80px;
     text-align: center;
@@ -42,7 +45,7 @@ body {
     object-fit: cover;
 }
 
-/* Form Section */
+/* Form Section - Desktop Layout */
 .form-section {
     display: flex;
     justify-content: space-between;
@@ -162,4 +165,169 @@ textarea {
 
 .submit-btn:hover {
     background-color: #16324F;
+}
+
+/* ===== RESPONSIVE STYLES ===== */
+
+/* Tablet (768px - 992px) */
+@media (max-width: 992px) {
+  /* Container adjustments */
+  .container, .hero-image-section .container {
+    padding: 0 20px;
+  }
+  
+  /* Form adjustments */
+  .form-section {
+    padding: 0 30px;
+    gap: 20px;
+  }
+  
+  /* Text adjustments */
+  .hero-text-section h1 {
+    font-size: 40px;
+  }
+  
+  .hero-text-section p {
+    font-size: 18px;
+  }
+  
+  /* Navigation adjustments */
+  .nav-container {
+    padding: 0 20px;
+  }
+}
+
+/* Mobile (< 768px) */
+@media (max-width: 768px) {
+  /* Header/Navigation adjustments */
+  .nav-container {
+    flex-direction: column;
+    padding: 10px;
+  }
+  
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .nav-links a {
+    padding: 8px 0;
+    display: block;
+  }
+  
+  .nav-login {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .btn-logout {
+    margin-top: 10px;
+  }
+  
+  /* Hero section adjustments */
+  .hero-text-section {
+    padding-top: 40px;
+    padding-bottom: 20px;
+  }
+  
+  .hero-text-section h1 {
+    font-size: 32px;
+  }
+  
+  .hero-text-section p {
+    font-size: 16px;
+    padding: 0 10px;
+  }
+  
+  /* Form section adjustments - switch to column layout */
+  .form-section {
+    flex-direction: column;
+    padding: 0 20px;
+  }
+  
+  .form-left, .form-right {
+    width: 100%;
+    flex: none;
+  }
+  
+  /* Form elements adjustments */
+  .time-group {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .time-group > div {
+    width: 100%;
+  }
+  
+  .submit-btn {
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  /* Preview section adjustment */
+  .preview-section {
+    height: 400px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+  
+  /* Footer adjustments */
+  .footer-container {
+    flex-direction: column;
+    padding: 30px 20px;
+  }
+  
+  .footer-left, .footer-center-left, .footer-center-right, .footer-right {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .email-container {
+    flex-direction: column;
+  }
+  
+  .email-container input, .subscribe-btn {
+    width: 100%;
+    margin: 5px 0;
+  }
+}
+
+/* Small Mobile (< 480px) */
+@media (max-width: 480px) {
+  /* Additional adjustments for very small screens */
+  .hero-text-section h1 {
+    font-size: 28px;
+  }
+  
+  .hero-text-section p {
+    font-size: 14px;
+  }
+  
+  /* Form elements */
+  label {
+    font-size: 14px;
+  }
+  
+  input[type="text"],
+  input[type="date"],
+  input[type="number"],
+  input[type="file"],
+  select,
+  textarea {
+    padding: 8px;
+  }
+  
+  .preview-section {
+    height: 350px;
+  }
+  
+  /* Checkbox text smaller */
+  .checkbox-label {
+    font-size: 11px;
+  }
 }
