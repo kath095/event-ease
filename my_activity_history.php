@@ -21,6 +21,34 @@
         display: flex;
     }
 
+    .event-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .event-card-link:hover {
+    transform: translateY(-5px);
+    text-decoration: none;
+    color: inherit;
+    }
+
+    .event-card-link:hover .card {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    .event-card-link:visited {
+    color: inherit;
+    text-decoration: none;
+    }
+
+    .event-card-link:focus {
+    outline: 2px solid #007bff;
+    outline-offset: 2px;
+    border-radius: 16px;
+    }
+
     .event-date {
         align-items: flex-start;
         margin-bottom: 10px;
@@ -96,43 +124,49 @@
 
 
     <div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: start;">
-        <?php
-        try {
-            $userId = $_SESSION['id'];
-            $stmt = $pdo->prepare("
-                    SELECT e.*
-                    FROM events e
-                    INNER JOIN events_regist er ON er.event_id = e.id
-                    WHERE er.regist_id = :user_id AND er.status = 'belum'
-                    ORDER BY e.event_date ASC
-                ");
-            $stmt->execute(['user_id' => $userId]);
+           <?php
+    try {
+        $userId = $_SESSION['id'];
+        $stmt = $pdo->prepare("
+            SELECT e.*
+            FROM events e
+            INNER JOIN events_regist er ON er.event_id = e.id
+            WHERE er.regist_id = :user_id AND er.status = 'belum'
+            ORDER BY e.event_date ASC
+        ");
+        $stmt->execute(['user_id' => $userId]);
 
-            while ($event = $stmt->fetch(PDO::FETCH_ASSOC)) {
-                $date = new DateTime($event['event_date']);
-                $day = $date->format('d');
-                $month = strtoupper($date->format('M'));
-        ?>
+        while ($event = $stmt->fetch(PDO::FETCH_ASSOC)) {
+            $date = new DateTime($event['event_date']);
+            $day = $date->format('d');
+            $month = strtoupper($date->format('M'));
+            
+            // Define eventTitle properly within the loop
+            $eventTitle = htmlspecialchars($event['title']);
+            $eventSlug = str_replace(' ', '-', $eventTitle);
+    ?>
+            <a href="event_details.php?event_title=<?= urlencode($eventSlug) ?>" class="event-card-link">
                 <div class="card">
-                    <img src="assets/<?= htmlspecialchars($event['photo_event']) ?>" alt="Event Image" />
+                    <img src="assets/<?= htmlspecialchars($event['photo_event']) ?>" alt="<?= $eventTitle ?>" />
                     <div class="card-content">
                         <div class="event-date">
                             <div class="month"><?= $month ?></div>
                             <div class="day"><?= $day ?></div>
                         </div>
                         <div class="event-info">
-                            <h3><?= htmlspecialchars($event['title']) ?></h3>
+                            <h3><?= $eventTitle ?></h3>
                             <p><?= htmlspecialchars($event['description']) ?></p>
                         </div>
                     </div>
                 </div>
-        <?php
-            }
-        } catch (PDOException $e) {
-            echo "<p style='color:red;'>Error: " . $e->getMessage() . "</p>";
+            </a>
+    <?php
         }
-        ?>
-    </div>
+    } catch (PDOException $e) {
+        echo "<p style='color:red;'>Error: " . $e->getMessage() . "</p>";
+    }
+    ?>
+</div>
 
 
     <div style="display: flex ;justify-content: center;">
